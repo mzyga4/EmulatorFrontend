@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "title": "Nintendo Entertainment System",
+    "content": "Generacja 3 / Konsola 8-bitowa\n\nWydana w roku 1983\n\nNastępca: Super Nintendo Entertainment System\nPoprzednik: Color TV-Game",
+    "imgSystemLogo": "system_nes",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_nes_hardware",
+    "imgSystemSoftware": "system_nes_software",
+    "imgSystemManufacturer": "manufacturer_nintendo",
+    "emulatorPackage": "com.explusalpha.NesEmu"
+  },
+  {
+    "id": 2,
+    "title": "PC Engine / TurboGrafx-16",
+    "content": "Generacja 4 / Konsola 8-bitowa z 16-bitowym układem graficznym\n\nWydana w roku 1987\n\nNastępca: SuperGrafx",
+    "imgSystemLogo": "system_pce",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_pce_hardware",
+    "imgSystemSoftware": "system_pce_software",
+    "imgSystemManufacturer": "manufacturer_nec_old",
+    "emulatorPackage": "com.PceEmu"
+  },
+  {
+    "id": 3,
+    "title": "Sega Mega Drive",
+    "content": "Generacja 4 / Konsola 16-bitowa\n\nWydana w roku 1988\n\nNastępca: Sega Saturn\nPoprzednik: Sega Master System",
+    "imgSystemLogo": "system_smd",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_smd_hardware",
+    "imgSystemSoftware": "system_smd_software",
+    "imgSystemManufacturer": "manufacturer_sega",
+    "emulatorPackage": "com.explusalpha.MdEmu"
+  },
+  {
+    "id": 4,
+    "title": "Super Nintendo Entertainment System",
+    "content": "Generacja 4 / Konsola 16-bitowa\n\nWydana w roku 1990\n\nNastępca: Nintendo 64\nPoprzednik: Nintendo Entertainment System",
+    "imgSystemLogo": "system_snes",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_snes_hardware",
+    "imgSystemSoftware": "system_snes_software",
+    "imgSystemManufacturer": "manufacturer_nintendo",
+    "emulatorPackage": "com.explusalpha.Snes9xPlus"
+  },
+  {
+    "id": 5,
+    "title": "PlayStation",
+    "content": "Generacja 5 / Konsola 32-bitowa\n\nWydana w roku 1994\n\nNastępca: PlayStation 2",
+    "imgSystemLogo": "system_ps1",
+    "imgSystemLogoBackground": "#000000",
+    "imgSystemHardware": "system_ps1_hardware",
+    "imgSystemSoftware": "system_ps1_software",
+    "imgSystemManufacturer": "manufacturer_sony",
+    "emulatorPackage": "com.swordfish.lemuroid"
+  },
+  {
+    "id": 6,
+    "title": "Sega Dreamcast",
+    "content": "Generacja 6 / Konsola 32-bitowa\n\nWydana w roku 1998\n\nPoprzednik: Sega Saturn",
+    "imgSystemLogo": "system_dc",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_dc_hardware",
+    "imgSystemSoftware": "system_dc_software",
+    "imgSystemManufacturer": "manufacturer_sega",
+    "emulatorPackage": "io.recompiled.redream"
+  },
+  {
+    "id": 7,
+    "title": "Game Boy Advance",
+    "content": "Generacja 6 / Konsola przenośna\n\nWydana w roku 2001\n\nNastępca: Nintendo DS\nPoprzednik: Game Boy Color",
+    "imgSystemLogo": "system_gba",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_gba_hardware",
+    "imgSystemSoftware": "system_gba_software",
+    "imgSystemManufacturer": "manufacturer_nintendo",
+    "emulatorPackage": "com.explusalpha.GbaEmu"
+  }
+]

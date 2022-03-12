@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivSystemHardware"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/fragment_game_system_hardware_content_desc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/system_nes_hardware" />
+
+            <ImageView
+                android:id="@+id/ivManufacturer"
+                android:layout_width="130dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="8dp"
+                android:foregroundGravity="left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/manufacturer_nintendo"
+                android:contentDescription="@string/fragment_game_system_manufacturer_content_desc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="Nintendo Entertainment System"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Generacja 3 / Konsola 8-bitowa\n\nWydana w roku 1983\n\nNastępca: Super Nintendo Entertainment System\nPoprzednik: Color TV-Game"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/ivSystemSoftware"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/fragment_game_system_software_content_desc"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/system_nes_software" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivSystemLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        app:srcCompat="@drawable/system_nes"
+        android:contentDescription="@string/fragment_game_system_logo_content_desc" />
+
+</LinearLayout>
