@@ -6,8 +6,11 @@
         <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/drawable/default_background.xml" value="0.2265" />
         <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/activity_details.xml" value="0.10840108401084012" />
         <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/fragment_game_list.xml" value="0.10230352303523035" />
+        <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/fragment_game_list_item.xml" value="0.10840108401084012" />
         <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/fragment_game_system.xml" value="0.10400000000000001" />
-        <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/fragment_game_system_list.xml" value="0.10230352303523035" />
+        <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/fragment_game_system_item.xml" value="0.176" />
+        <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/fragment_game_system_list.xml" value="0.176" />
         <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/layout/fragment_main.xml" value="0.1" />
         <entry key="..\:/Users/mzyga/AndroidStudioProjects/EmulatorFrontend/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
       </map>

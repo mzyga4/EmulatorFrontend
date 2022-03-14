@@ -33,11 +33,11 @@
                 android:layout_width="130dp"
                 android:layout_height="65dp"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/fragment_game_system_manufacturer_content_desc"
                 android:foregroundGravity="left"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/manufacturer_nintendo"
-                android:contentDescription="@string/fragment_game_system_manufacturer_content_desc" />
+                app:srcCompat="@drawable/manufacturer_nintendo" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
@@ -88,7 +88,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@android:color/white"
-        app:srcCompat="@drawable/system_nes"
-        android:contentDescription="@string/fragment_game_system_logo_content_desc" />
+        android:contentDescription="@string/fragment_game_system_logo_content_desc"
+        app:srcCompat="@drawable/system_nes" />
 
 </LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Gry</string>
+    <string name="app_name">Gry emulowane</string>
     <string name="fragment_game_system_hardware_content_desc">obrazek konsoli</string>
     <string name="fragment_game_system_logo_content_desc">logo konsoli</string>
     <string name="fragment_game_system_software_content_desc">wyróżnione gry na tę konsolę</string>

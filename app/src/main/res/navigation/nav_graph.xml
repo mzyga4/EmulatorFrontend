@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gameSystemFragment">
+
+    <fragment
+        android:id="@+id/gameSystemFragment"
+        android:name="pl.mzyga4.emulatorfrontend.game_system_list.GameSystemFragment"
+        android:label="fragment_game_system_list"
+        tools:layout="@layout/fragment_game_system_list" >
+        <action
+            android:id="@+id/action_gameSystemFragment_to_gameListFragment"
+            app:destination="@id/gameListFragment"
+            app:popUpTo="@id/gameSystemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameListFragment"
+        android:name="pl.mzyga4.emulatorfrontend.game_list.GameListFragment"
+        android:label="fragment_game_list"
+        tools:layout="@layout/fragment_game_list" />
+</navigation>

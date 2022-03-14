@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Games</string>
+    <string name="app_name">Emulated Games</string>
     <string name="fragment_game_system_hardware_content_desc">console image</string>
     <string name="fragment_game_system_logo_content_desc">console logo</string>
     <string name="fragment_game_system_software_content_desc">most notable games on this console</string>

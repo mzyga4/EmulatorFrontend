@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="pl.mzyga4.emulatorfrontend.GameSystemFragment"
+    android:name="pl.mzyga4.emulatorfrontend.GameListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".game_system_list.GameSystemFragment"
-    tools:listitem="@layout/fragment_game_system_item" />
+    tools:context=".game_list.GameListFragment"
+    tools:listitem="@layout/fragment_game_list_item" />

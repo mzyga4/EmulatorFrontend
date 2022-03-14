@@ -1,4 +1,4 @@
-package pl.mzyga4.emulatorfrontend;
+package pl.mzyga4.emulatorfrontend.game_system_list;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import pl.mzyga4.emulatorfrontend.databinding.FragmentGameSystemBinding;
+import pl.mzyga4.emulatorfrontend.databinding.FragmentGameSystemItemBinding;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link GameSystem}.
@@ -30,7 +30,7 @@ public class GameSystemRecyclerViewAdapter extends RecyclerView.Adapter<GameSyst
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(FragmentGameSystemBinding.inflate(
+        return new ViewHolder(FragmentGameSystemItemBinding.inflate(
                 LayoutInflater.from(parent.getContext()), parent, false));
     }
 
@@ -89,7 +89,7 @@ public class GameSystemRecyclerViewAdapter extends RecyclerView.Adapter<GameSyst
         public final ImageView mSystemSoftwareImg;
         public final ImageView mSystemManufacturerImg;
 
-        public ViewHolder(FragmentGameSystemBinding binding) {
+        public ViewHolder(FragmentGameSystemItemBinding binding) {
             super(binding.getRoot());
             mTitleView = binding.title;
             mContentView = binding.content;

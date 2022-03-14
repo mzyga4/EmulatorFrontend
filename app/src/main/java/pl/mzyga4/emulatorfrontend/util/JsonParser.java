@@ -1,9 +1,8 @@
-package pl.mzyga4.emulatorfrontend;
+package pl.mzyga4.emulatorfrontend.util;
 
 import android.content.Context;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,12 +11,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class JsonParser {
-    private static final Type REVIEW_TYPE = new TypeToken<List<GameSystem>>() {}.getType();
-
-    public static List<GameSystem> getSampleData(Context context){
+    public static List<?> getListOfTypeFromJson(Context context, Type type, String fileName){
         try{
             Gson gson = new Gson();
-            return gson.fromJson(getJsonFromAssets(context, "gs.json"), REVIEW_TYPE);
+            return gson.fromJson(getJsonFromAssets(context, fileName), type);
 
         }catch (Exception e){
             return null;

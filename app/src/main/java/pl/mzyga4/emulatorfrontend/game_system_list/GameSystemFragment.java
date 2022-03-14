@@ -1,10 +1,10 @@
-package pl.mzyga4.emulatorfrontend;
+package pl.mzyga4.emulatorfrontend.game_system_list;
 
 import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,15 +14,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.reflect.TypeToken;
+
+import java.util.List;
+
+import pl.mzyga4.emulatorfrontend.game_list.GameListFragment;
+import pl.mzyga4.emulatorfrontend.util.JsonParser;
+import pl.mzyga4.emulatorfrontend.R;
+
 /**
  * A fragment representing a list of Items.
  */
 public class GameSystemFragment extends Fragment {
-
     private static final String ARG_COLUMN_COUNT = "column-count";
-    private int mColumnCount = 1;
 
     private RecyclerView mRecyclerView;
+    private List<GameSystem> mData;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -30,28 +37,17 @@ public class GameSystemFragment extends Fragment {
      */
     public GameSystemFragment() { }
 
-    public static GameSystemFragment newInstance(int columnCount) {
-        GameSystemFragment fragment = new GameSystemFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_game_system_list, container, false);
+        setupAdapter(view);
 
+        return view;
+    }
+
+    @SuppressWarnings("unchecked")
+    private void setupAdapter(View view){
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
@@ -62,32 +58,28 @@ public class GameSystemFragment extends Fragment {
 
             mRecyclerView.setLayoutManager(layoutManager);
 
-            mRecyclerView.setAdapter(
-                    new GameSystemRecyclerViewAdapter( requireActivity(),
-                            JsonParser.getSampleData(requireContext()) )
+            mData = (List<GameSystem>) JsonParser.getListOfTypeFromJson(
+                    requireContext(),
+                    new TypeToken<List<GameSystem>>() {}.getType(),
+                    "gs.json"
             );
+
+            mRecyclerView.setAdapter(new GameSystemRecyclerViewAdapter(requireActivity(), mData));
         }
-        return view;
     }
 
-    public void onKeyDown(int keyCode, KeyEvent event) {
+    public void onKeyDown(int keyCode) {
+        if(mRecyclerView == null) return;
+        Log.i("GSF", "setupAdapter - onKeyDown - " + keyCode);
         LinearLayoutManager layoutManager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
 
         if(layoutManager != null && mRecyclerView.getAdapter() != null){
-            Log.i("GSF", "layoutManager - "
-                    + layoutManager.findFirstVisibleItemPosition() + "\n" +
-                    + layoutManager.findFirstCompletelyVisibleItemPosition() + "\n" +
-                    + layoutManager.findLastVisibleItemPosition() + "\n" +
-                    + layoutManager.findLastCompletelyVisibleItemPosition() + "\n"
-            );
-
             int lastElementPos = mRecyclerView.getAdapter().getItemCount() - 1;
             int currentPos = layoutManager.findFirstVisibleItemPosition();
 
             switch(keyCode){
                 case KeyEvent.KEYCODE_DPAD_RIGHT:
                     if(currentPos == lastElementPos) {
-                        Log.i("GSF", "layoutManager - KEYCODE_DPAD_RIGHT");
                         mRecyclerView.scrollToPosition(0);
                         mRecyclerView.invalidate();
                     }else
@@ -95,11 +87,18 @@ public class GameSystemFragment extends Fragment {
                     break;
                 case KeyEvent.KEYCODE_DPAD_LEFT:
                     if(currentPos == 0) {
-                        Log.i("GSF", "layoutManager - KEYCODE_DPAD_LEFT");
                         mRecyclerView.scrollToPosition(lastElementPos);
                     }else
                         mRecyclerView.smoothScrollToPosition(currentPos -1);
                         break;
+                case KeyEvent.KEYCODE_DPAD_DOWN:
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable(GameListFragment.ARG_GAME_SYSTEM_OBJ,
+                            mData.get(currentPos));
+
+                    NavHostFragment.findNavController(this)
+                            .navigate(R.id.action_gameSystemFragment_to_gameListFragment, bundle);
+                    break;
             }
         }
     }

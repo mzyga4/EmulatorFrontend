@@ -8,7 +8,20 @@
     "imgSystemHardware": "system_nes_hardware",
     "imgSystemSoftware": "system_nes_software",
     "imgSystemManufacturer": "manufacturer_nintendo",
-    "emulatorPackage": "com.explusalpha.NesEmu"
+    "emulatorPackage": "com.explusalpha.NesEmu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/nes"
+  },
+  {
+    "id": 2,
+    "title": "Sega Master System",
+    "content": "Generacja 3 / Konsola 8-bitowa\n\nWydana w roku 1985\n\nNastępca: Sega Mega Drive\nPoprzednik: SG-1000",
+    "imgSystemLogo": "system_sms",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_sms_hardware",
+    "imgSystemSoftware": "system_sms_software",
+    "imgSystemManufacturer": "manufacturer_sega",
+    "emulatorPackage": "com.explusalpha.MdEmu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/sega"
   },
   {
     "id": 2,
@@ -19,7 +32,8 @@
     "imgSystemHardware": "system_pce_hardware",
     "imgSystemSoftware": "system_pce_software",
     "imgSystemManufacturer": "manufacturer_nec_old",
-    "emulatorPackage": "com.PceEmu"
+    "emulatorPackage": "com.PceEmu",
+    "gamesListSource": "storage/emulated/0/ROM/pce"
   },
   {
     "id": 3,
@@ -30,7 +44,8 @@
     "imgSystemHardware": "system_smd_hardware",
     "imgSystemSoftware": "system_smd_software",
     "imgSystemManufacturer": "manufacturer_sega",
-    "emulatorPackage": "com.explusalpha.MdEmu"
+    "emulatorPackage": "com.explusalpha.MdEmu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/sega"
   },
   {
     "id": 4,
@@ -41,7 +56,8 @@
     "imgSystemHardware": "system_snes_hardware",
     "imgSystemSoftware": "system_snes_software",
     "imgSystemManufacturer": "manufacturer_nintendo",
-    "emulatorPackage": "com.explusalpha.Snes9xPlus"
+    "emulatorPackage": "com.explusalpha.Snes9xPlus",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/snes"
   },
   {
     "id": 5,
@@ -52,7 +68,8 @@
     "imgSystemHardware": "system_ps1_hardware",
     "imgSystemSoftware": "system_ps1_software",
     "imgSystemManufacturer": "manufacturer_sony",
-    "emulatorPackage": "com.swordfish.lemuroid"
+    "emulatorPackage": "com.swordfish.lemuroid",
+    "gamesListSource": "storage/emulated/0/ROM/PS1"
   },
   {
     "id": 6,
@@ -63,7 +80,8 @@
     "imgSystemHardware": "system_dc_hardware",
     "imgSystemSoftware": "system_dc_software",
     "imgSystemManufacturer": "manufacturer_sega",
-    "emulatorPackage": "io.recompiled.redream"
+    "emulatorPackage": "io.recompiled.redream",
+    "gamesListSource": "storage/emulated/0/ROM/SEGA_DC"
   },
   {
     "id": 7,
@@ -74,6 +92,7 @@
     "imgSystemHardware": "system_gba_hardware",
     "imgSystemSoftware": "system_gba_software",
     "imgSystemManufacturer": "manufacturer_nintendo",
-    "emulatorPackage": "com.explusalpha.GbaEmu"
+    "emulatorPackage": "com.explusalpha.GbaEmu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/gba"
   }
 ]
