@@ -42,7 +42,7 @@ public class GameRecyclerViewAdapter extends RecyclerView.Adapter<GameRecyclerVi
         holder.mIdView.setText(mItems.get(position).id);
         holder.mContentView.setText(mItems.get(position).content);
 
-        holder.itemView.setOnClickListener(view -> openFile(mItems.get(position)));
+        holder.itemView.setOnClickListener(view -> openFile(mActivity, mGameSystem, mItems.get(position)));
     }
 
     @Override
@@ -68,10 +68,18 @@ public class GameRecyclerViewAdapter extends RecyclerView.Adapter<GameRecyclerVi
         }
     }
 
-    public void openFile(Game game) {
+    public static void openFile(Activity activity, GameSystem gameSystem, Game game) {
         try{
-            File file = new File(mGameSystem.gamesListSource, game.details);
-            Log.i("GCRVA/", mGameSystem.gamesListSource + " --- " + game.details);
+            String gameDetails = game.details;
+            String gameSource = gameSystem.gamesListSource;
+
+            if(gameDetails.contains("_use_src_2_")) {
+                gameDetails = gameDetails.replace("_use_src_2_", "");
+                gameSource = gameSystem.gamesListSource2;
+            }
+
+            File file = new File(gameSource, gameDetails);
+            Log.i("GCRVA/", gameSource + " --- " + gameDetails);
 
             //Uri uri = FileProvider.getUriForFile(mActivity, mGameSystem.emulatorPackage + ".fileprovider", file);
             Uri uri = Uri.parse(file.getPath());
@@ -81,8 +89,8 @@ public class GameRecyclerViewAdapter extends RecyclerView.Adapter<GameRecyclerVi
             // Open file with user selected app
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setDataAndType(uri, "*/*");
-            Intent chooser = Intent.createChooser(intent, "Wybierz odpowiedni emulator");
-            mActivity.startActivity(chooser);
+            Intent chooser = Intent.createChooser(intent, "Wybierz " + gameSystem.emulatorAlias);
+            activity.startActivity(chooser);
         }catch (Exception e){
             Log.w("GRVA/", e.getMessage());
         }

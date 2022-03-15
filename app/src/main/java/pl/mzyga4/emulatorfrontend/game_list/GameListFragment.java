@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,25 +66,55 @@ public class GameListFragment extends Fragment {
 
             List<Game> contentList = new ArrayList<>();
             File[] fileList = new File(mGameSystem.gamesListSource).listFiles();
-            int i = 0;
-            if(fileList != null)
-                for(File file : fileList) {
-                    i++;
-                    String filename = file.getName().replace("vs.", "vs");
-                    String[] fn = filename.split("\\.");
-                    String title = clearFromDummies(fn[0]);
-                    boolean noDummies = !title.contains("vmu ") && !title.equals("emu") && !title.equals("data");
-                    boolean ifSegaMS = !mGameSystem.imgSystemLogo.equals("system_sms") || filename.endsWith(".sms");
-                    boolean ifSegaMD = !mGameSystem.imgSystemLogo.equals("system_smd") || !filename.endsWith(".sms");
 
-                    if(noDummies && ifSegaMS && ifSegaMD)
-                        contentList.add(new Game(String.valueOf(i), title, file.getName()));
-                }
+            setupFileList(fileList, contentList, false);
+            if(mGameSystem.gamesListSource2 != null && !mGameSystem.gamesListSource2.isEmpty()) {
+                File[] fileList2 = new File(mGameSystem.gamesListSource2).listFiles();
+                setupFileList(fileList2, contentList, true);
+            }
 
             contentList.sort(Comparator.comparing(Game::getContent));
             mRecyclerView.setAdapter(new GameRecyclerViewAdapter(requireActivity(), contentList, mGameSystem));
         }
         return view;
+    }
+
+    private void setupFileList(File[] fileList, List<Game> contentList, boolean bAddPrefix){
+        int i = 0;
+        if(fileList != null)
+            for(File file : fileList) {
+                i++;
+
+                String fullFileName = file.getName();
+                if(file.isDirectory()) {
+                    String orgFileName = file.getName();
+                    File[] filesInDir = new File(file.getPath()).listFiles(
+                            (file1, s) ->
+                                    s.contains(".cue") || s.contains(".gdi") || s.contains(".cdi")
+                    );
+
+                    if(filesInDir != null && filesInDir.length > 0) {
+                        file = filesInDir[0];
+                        fullFileName = orgFileName + "/" + file.getName();
+                    }
+                }
+
+                String filename = file.getName().replace("vs.", "vs");
+                String[] fn = filename.split("\\.");
+                String title = clearFromDummies(fn[0]);
+                boolean noDummies = !title.contains("vmu ") && !title.equals("emu") && !title.equals("data")
+                        && !file.getName().endsWith(".ncq");
+                boolean ifSegaMS = !mGameSystem.imgSystemLogo.equals("system_sms") || filename.endsWith(".sms");
+                boolean ifSegaMD = !mGameSystem.imgSystemLogo.equals("system_smd") || !filename.endsWith(".sms");
+
+                if(bAddPrefix)
+                    fullFileName = "_use_src_2_" + fullFileName;
+
+                if(noDummies && ifSegaMS && ifSegaMD) {
+                    Log.i("GLF", file.getName());
+                    contentList.add(new Game(String.valueOf(i), title, fullFileName));
+                }
+            }
     }
 
     private String clearFromDummies(String text){
@@ -118,7 +149,13 @@ public class GameListFragment extends Fragment {
                 .replaceAll("\\(V1", "")
                 .replaceAll("\\(J\\)", "")
                 .replaceAll("\\(54227\\)", "")
+                .replaceAll(" \\(RE\\)", "")
                 .replaceAll("GDI v1 0 0", "")
-                .replaceAll("\\(En,Ja,Zh\\)", "");
+                .replaceAll("\\(En,Ja,Zh\\)", "")
+
+                // Translate weird titles
+                .replace("Akumajou Dracula X - Chi No Rondo", "Castlevania: Rondo of Blood")
+                .replace("Daimakaimura", "Daimakaimura (Ghouls 'N Ghosts)")
+                .replace("NewZealand", "New Zealand");
     }
 }

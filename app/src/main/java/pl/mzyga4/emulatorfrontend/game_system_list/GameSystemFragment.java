@@ -78,6 +78,13 @@ public class GameSystemFragment extends Fragment {
             int currentPos = layoutManager.findFirstVisibleItemPosition();
 
             switch(keyCode){
+                case KeyEvent.KEYCODE_DPAD_CENTER:
+                    String alias = mData.get(currentPos).emulatorAlias;
+                    if(alias != null && !alias.isEmpty())
+                        goToGameList(currentPos);
+                    else
+                        GameSystemRecyclerViewAdapter.startApp(requireActivity(), mData.get(currentPos).emulatorPackage);
+                    break;
                 case KeyEvent.KEYCODE_DPAD_RIGHT:
                     if(currentPos == lastElementPos) {
                         mRecyclerView.scrollToPosition(0);
@@ -92,14 +99,18 @@ public class GameSystemFragment extends Fragment {
                         mRecyclerView.smoothScrollToPosition(currentPos -1);
                         break;
                 case KeyEvent.KEYCODE_DPAD_DOWN:
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable(GameListFragment.ARG_GAME_SYSTEM_OBJ,
-                            mData.get(currentPos));
-
-                    NavHostFragment.findNavController(this)
-                            .navigate(R.id.action_gameSystemFragment_to_gameListFragment, bundle);
+                    goToGameList(currentPos);
                     break;
             }
         }
+    }
+
+    private void goToGameList(int currentPos){
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(GameListFragment.ARG_GAME_SYSTEM_OBJ,
+                mData.get(currentPos));
+
+        NavHostFragment.findNavController(this)
+                .navigate(R.id.action_gameSystemFragment_to_gameListFragment, bundle);
     }
 }

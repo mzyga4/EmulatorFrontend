@@ -54,7 +54,7 @@ public class GameSystemRecyclerViewAdapter extends RecyclerView.Adapter<GameSyst
         holder.mSystemSoftwareImg.setImageResource(softwareResId);
         holder.mSystemManufacturerImg.setImageResource(manufacturerResId);
 
-        holder.itemView.setOnClickListener(view -> startApp(holder.mItem.emulatorPackage));
+        //holder.itemView.setOnClickListener(view -> startApp(mActivity, holder.mItem.emulatorPackage));
     }
 
     private int getResourceId(String drawableName) {
@@ -67,10 +67,10 @@ public class GameSystemRecyclerViewAdapter extends RecyclerView.Adapter<GameSyst
         }
     }
 
-    private void startApp(String packageName){
-        Intent launchIntent = mActivity.getPackageManager().getLaunchIntentForPackage(packageName);
+    public static void startApp(Activity activity, String packageName){
+        Intent launchIntent = activity.getPackageManager().getLaunchIntentForPackage(packageName);
         if (launchIntent != null) { //null pointer check in case package name was not found
-            mActivity.startActivity(launchIntent);
+            activity.startActivity(launchIntent);
         }
     }
 

@@ -14,7 +14,9 @@ public class GameSystem implements Serializable {
     public String imgSystemSoftware;
     public String imgSystemManufacturer;
     public String emulatorPackage;
+    public String emulatorAlias;
     public String gamesListSource;
+    public String gamesListSource2;
 
     @NonNull
     @Override

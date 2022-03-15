@@ -9,7 +9,9 @@
     "imgSystemSoftware": "system_nes_software",
     "imgSystemManufacturer": "manufacturer_nintendo",
     "emulatorPackage": "com.explusalpha.NesEmu",
-    "gamesListSource": "storage/AC14809A148068E2/ROM/nes"
+    "emulatorAlias": "NES.emu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/nes",
+    "gamesListSource2": ""
   },
   {
     "id": 2,
@@ -21,10 +23,12 @@
     "imgSystemSoftware": "system_sms_software",
     "imgSystemManufacturer": "manufacturer_sega",
     "emulatorPackage": "com.explusalpha.MdEmu",
-    "gamesListSource": "storage/AC14809A148068E2/ROM/sega"
+    "emulatorAlias": "MD.emu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/sega",
+    "gamesListSource2": ""
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "PC Engine / TurboGrafx-16",
     "content": "Generacja 4 / Konsola 8-bitowa z 16-bitowym układem graficznym\n\nWydana w roku 1987\n\nNastępca: SuperGrafx",
     "imgSystemLogo": "system_pce",
@@ -33,10 +37,12 @@
     "imgSystemSoftware": "system_pce_software",
     "imgSystemManufacturer": "manufacturer_nec_old",
     "emulatorPackage": "com.PceEmu",
-    "gamesListSource": "storage/emulated/0/ROM/pce"
+    "emulatorAlias": "PCE.emu",
+    "gamesListSource": "storage/emulated/0/ROM/pce",
+    "gamesListSource2": ""
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Sega Mega Drive",
     "content": "Generacja 4 / Konsola 16-bitowa\n\nWydana w roku 1988\n\nNastępca: Sega Saturn\nPoprzednik: Sega Master System",
     "imgSystemLogo": "system_smd",
@@ -45,10 +51,12 @@
     "imgSystemSoftware": "system_smd_software",
     "imgSystemManufacturer": "manufacturer_sega",
     "emulatorPackage": "com.explusalpha.MdEmu",
-    "gamesListSource": "storage/AC14809A148068E2/ROM/sega"
+    "emulatorAlias": "MD.emu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/sega",
+    "gamesListSource2": "storage/emulated/0/ROM/SEGA_cd"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Super Nintendo Entertainment System",
     "content": "Generacja 4 / Konsola 16-bitowa\n\nWydana w roku 1990\n\nNastępca: Nintendo 64\nPoprzednik: Nintendo Entertainment System",
     "imgSystemLogo": "system_snes",
@@ -57,10 +65,12 @@
     "imgSystemSoftware": "system_snes_software",
     "imgSystemManufacturer": "manufacturer_nintendo",
     "emulatorPackage": "com.explusalpha.Snes9xPlus",
-    "gamesListSource": "storage/AC14809A148068E2/ROM/snes"
+    "emulatorAlias": "Snes9x EX+",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/snes",
+    "gamesListSource2": ""
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "PlayStation",
     "content": "Generacja 5 / Konsola 32-bitowa\n\nWydana w roku 1994\n\nNastępca: PlayStation 2",
     "imgSystemLogo": "system_ps1",
@@ -69,10 +79,12 @@
     "imgSystemSoftware": "system_ps1_software",
     "imgSystemManufacturer": "manufacturer_sony",
     "emulatorPackage": "com.swordfish.lemuroid",
-    "gamesListSource": "storage/emulated/0/ROM/PS1"
+    "emulatorAlias": "",
+    "gamesListSource": "storage/emulated/0/ROM/PS1",
+    "gamesListSource2": ""
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Sega Dreamcast",
     "content": "Generacja 6 / Konsola 32-bitowa\n\nWydana w roku 1998\n\nPoprzednik: Sega Saturn",
     "imgSystemLogo": "system_dc",
@@ -81,10 +93,12 @@
     "imgSystemSoftware": "system_dc_software",
     "imgSystemManufacturer": "manufacturer_sega",
     "emulatorPackage": "io.recompiled.redream",
-    "gamesListSource": "storage/emulated/0/ROM/SEGA_DC"
+    "emulatorAlias": "",
+    "gamesListSource": "storage/emulated/0/ROM/SEGA_DC",
+    "gamesListSource2": ""
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Game Boy Advance",
     "content": "Generacja 6 / Konsola przenośna\n\nWydana w roku 2001\n\nNastępca: Nintendo DS\nPoprzednik: Game Boy Color",
     "imgSystemLogo": "system_gba",
@@ -93,6 +107,8 @@
     "imgSystemSoftware": "system_gba_software",
     "imgSystemManufacturer": "manufacturer_nintendo",
     "emulatorPackage": "com.explusalpha.GbaEmu",
-    "gamesListSource": "storage/AC14809A148068E2/ROM/gba"
+    "emulatorAlias": "GBA.emu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/gba",
+    "gamesListSource2": ""
   }
 ]
