@@ -2,25 +2,24 @@ package pl.mzyga4.emulatorfrontend.game_system_list;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
+import pl.mzyga4.emulatorfrontend.R;
 import pl.mzyga4.emulatorfrontend.game_list.GameListFragment;
 import pl.mzyga4.emulatorfrontend.util.JsonParser;
-import pl.mzyga4.emulatorfrontend.R;
 
 /**
  * A fragment representing a list of Items.
@@ -35,7 +34,8 @@ public class GameSystemFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public GameSystemFragment() { }
+    public GameSystemFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

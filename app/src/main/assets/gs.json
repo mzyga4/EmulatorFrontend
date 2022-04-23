@@ -1,6 +1,20 @@
 [
   {
     "id": 1,
+    "title": "Atari 2600",
+    "content": "Generacja 2 / Konsola 8-bitowa\n\nWydana w roku 1977\n\nNastępca: Atari 5200\nPoprzednik: Atari Home Pong",
+    "imgSystemLogo": "system_a26",
+    "imgSystemLogoBackground": "#FFFFFF",
+    "imgSystemHardware": "system_a26_hardware",
+    "imgSystemSoftware": "system_a26_software",
+    "imgSystemManufacturer": "manufacturer_atari",
+    "emulatorPackage": "com.explusalpha.A2600Emu",
+    "emulatorAlias": "A2600.emu",
+    "gamesListSource": "storage/AC14809A148068E2/ROM/a2600",
+    "gamesListSource2": ""
+  },
+  {
+    "id": 2,
     "title": "Nintendo Entertainment System",
     "content": "Generacja 3 / Konsola 8-bitowa\n\nWydana w roku 1983\n\nNastępca: Super Nintendo Entertainment System\nPoprzednik: Color TV-Game",
     "imgSystemLogo": "system_nes",
@@ -14,7 +28,7 @@
     "gamesListSource2": ""
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Sega Master System",
     "content": "Generacja 3 / Konsola 8-bitowa\n\nWydana w roku 1985\n\nNastępca: Sega Mega Drive\nPoprzednik: SG-1000",
     "imgSystemLogo": "system_sms",
@@ -28,7 +42,7 @@
     "gamesListSource2": ""
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "PC Engine / TurboGrafx-16",
     "content": "Generacja 4 / Konsola 8-bitowa z 16-bitowym układem graficznym\n\nWydana w roku 1987\n\nNastępca: SuperGrafx",
     "imgSystemLogo": "system_pce",
@@ -42,7 +56,7 @@
     "gamesListSource2": ""
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Sega Mega Drive",
     "content": "Generacja 4 / Konsola 16-bitowa\n\nWydana w roku 1988\n\nNastępca: Sega Saturn\nPoprzednik: Sega Master System",
     "imgSystemLogo": "system_smd",
@@ -56,7 +70,7 @@
     "gamesListSource2": "storage/emulated/0/ROM/SEGA_cd"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Super Nintendo Entertainment System",
     "content": "Generacja 4 / Konsola 16-bitowa\n\nWydana w roku 1990\n\nNastępca: Nintendo 64\nPoprzednik: Nintendo Entertainment System",
     "imgSystemLogo": "system_snes",
@@ -70,7 +84,7 @@
     "gamesListSource2": ""
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "PlayStation",
     "content": "Generacja 5 / Konsola 32-bitowa\n\nWydana w roku 1994\n\nNastępca: PlayStation 2",
     "imgSystemLogo": "system_ps1",
@@ -84,7 +98,7 @@
     "gamesListSource2": ""
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Sega Dreamcast",
     "content": "Generacja 6 / Konsola 32-bitowa\n\nWydana w roku 1998\n\nPoprzednik: Sega Saturn",
     "imgSystemLogo": "system_dc",
@@ -98,7 +112,7 @@
     "gamesListSource2": ""
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Game Boy Advance",
     "content": "Generacja 6 / Konsola przenośna\n\nWydana w roku 2001\n\nNastępca: Nintendo DS\nPoprzednik: Game Boy Color",
     "imgSystemLogo": "system_gba",

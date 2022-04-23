@@ -21,7 +21,7 @@ public class MainActivity extends FragmentActivity {
     final int NAV_HOST_FRAGMENT = R.id.nav_host_fragment_content_main;
     final String[] PERMISSIONS = {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.READ_EXTERNAL_STORAGE
+            Manifest.permission.READ_EXTERNAL_STORAGE,
     };
     public final int REQUEST_PERMISSIONS = 138;
 
